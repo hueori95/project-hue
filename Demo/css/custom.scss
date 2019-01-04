@@ -1,0 +1,345 @@
+
+/* Table Css
+
+1.0 Global
+1.1 Header
+
+*/
+
+/* 1.0 Global **************************/
+@import 'font.scss';
+
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-size: 14px;
+    font-weight: 400;
+    color: #343434;
+    line-height: 2em;
+}
+
+$font-stack: Poppins-Medium, sans-serif;
+$primary-color: #333;
+
+p {
+    line-height: 23px;
+}
+
+a:hover,
+button:hover {
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+a, input, button {
+    &:focus {
+        outline: none;
+    }
+}
+
+i:before {
+    margin-left: 0 !important;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body, button, input, select, textarea {
+    color: #333;
+}
+
+a:hover {
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+table, tr, td, th {
+    border: 1px solid #ededed;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 100%;
+    line-height: 2;
+    margin: 0 0 20px;
+    width: 100%;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+th {
+    padding: 5px 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+}
+
+th a {
+    color: #555;
+}
+
+td {
+    padding: 5px 10px;
+}
+
+table tr td a {
+    color: #333;
+}
+
+ol, ul {
+    margin: 0;
+    padding: 0 0 0 15px;
+}
+
+ul {
+    list-style-type: square;
+}
+
+ul li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+ol {
+    display: block;
+    list-style-type: decimal;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 20px;
+    margin-top: 0;
+}
+
+address {
+    font-style: italic;
+    margin: 0 0 24px;
+}
+
+cite, em, var, address, dfn {
+    font-style: italic;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    clear: both;
+    font-weight: 500;
+    margin: 36px 0 12px;
+}
+
+h1 {
+    font-size: 33px;
+    font-size: 2.0625rem;
+    line-height: 1.2727272727;
+    margin-top: 1.696969697em;
+    margin-bottom: 0.8484848485em;
+}
+
+h2 {
+    font-size: 28px;
+    font-size: 1.75rem;
+    line-height: 1.25;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+h3 {
+    font-size: 23px;
+    font-size: 1.4375rem;
+    line-height: 1.2173913043;
+    margin-top: 2.4347826087em;
+    margin-bottom: 1.2173913043em;
+}
+
+h4 {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.1052631579;
+    margin-top: 2.9473684211em;
+    margin-bottom: 1.473684211em;
+}
+
+h5 {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.1052631579;
+    margin-top: 2.9473684211em;
+    margin-bottom: 1.473684211em;
+}
+
+h6 {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.1052631579;
+    margin-top: 2.9473684211em;
+    margin-bottom: 1.473684211em;
+}
+
+@mixin style-font($color,$fontweight,$fontsize,$fontfamily) {
+    color: $color;
+    font-weight: $fontweight;
+    font-size: $fontsize;
+    font-family: $fontfamily;
+}
+
+.img28x28 {
+    width: 28px;
+    height: 28px;
+}
+/*end*/
+/* 1.1 Header **************************/
+header {
+    .navbar-default {
+        background-color: transparent;
+        border: none;
+        margin-bottom: 0px;
+        .nav:not(.navbar-right) > li > a:not(.glyphicon) {
+            padding: 15px 32px;
+            @include style-font(#fff, 500, 16px, Poppins-Medium);
+        }
+
+        .nav > li > a.glyphicon {
+            color: #fff;
+            padding: 15px 32px;
+        }
+
+
+        .navbar-collapse.collapse:not(.show) {
+            margin-top: 8px;
+            border: none;
+
+
+            .navbar-nav:not(.navbar-right) {
+                margin-left: 11%;
+            }
+        }
+
+        .navbar-collapse.collapse {
+            max-height: initial;
+            overflow-x: unset;
+        }
+    }
+
+    .blur-header {
+        -webkit-filter: blur(3px);
+        filter: blur(3px);
+        background-color: rgba(255, 255, 255, 0.3);
+        height: 77px;
+        width: 100%;
+        position: absolute;
+    }
+
+    .container .navbar-header {
+        height: 77px;
+
+        .navbar-brand {
+            background-image: url('../images/logo/logo-onyabike.png');
+            width: 146px;
+            height: 44px;
+            background-size: 146px 44px;
+            margin-top: 15px;
+            margin-left: 20px;
+        }
+    }
+
+    &:after {
+        
+    }
+
+    .glyphicon-search:before {
+        font-size: 18px;
+    }
+
+    .navbar-nav.navbar-right {
+        a {
+            width: 28px;
+            height: 28px;
+            background-color: #ddd;
+            padding: 0px !important;
+            margin: 12px;
+        }
+    }
+
+    .navbar-toggle {
+        margin-top: 21px;
+        background-color: #fff;
+    }
+}
+@media (max-width: 991px){
+
+    header .navbar-default .nav > li > a {
+        padding: 18px 17px !important
+    }
+    header .navbar-default .navbar-collapse.collapse:not(.show) .navbar-nav:not(.navbar-right){
+        margin-left: 0px;
+    }
+    
+}
+/*end*/
+/*content*/
+.content {
+    .banner {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: url('../images/royal-enfield-himalayan-fotos-accion-2.png');
+        background-repeat: no-repeat;
+        background-position: center 0px;
+        z-index: -1;
+
+        .title {
+            @include style-font(#fff, 500, 64px, Poppins-SemiBold);
+            line-height: 75px;
+        }
+
+        .pp_description{
+            color: #fff;
+        }
+    }
+}
